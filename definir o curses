@@ -1,0 +1,5 @@
+#ifdef WINDOWS
+#include <curses.h>
+#else
+#incluse <ncurses.h>
+#endif
