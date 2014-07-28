@@ -2,19 +2,18 @@
 #include "deque.h"
 
 //Criar Deque 
-Deque criarDeque(void)
+Deque* criarDeque(void)
 {
-	Deque deque;
-	deque.cabeca=NULL;
-	deque.calda=NULL;
-	deque.tamanho=0;
+	Deque* deque=malloc(sizeof(Deque));
+	deque->cabeca=NULL;
+	deque->calda=NULL;
+	deque->tamanho=0;
 	return deque;
 }
 
 //Inserir um nó numa estrutura Deque
-void dequeInserir(Deque* deque, char dado)
+void dequeInserir(Deque* deque, No* no)
 {
-  No* no=criarNo(dado);
   if(no){
   	if(!deque->cabeca){
       deque->cabeca=deque->calda=no;
@@ -27,7 +26,7 @@ void dequeInserir(Deque* deque, char dado)
   	  deque->cabeca->ante=no;
   	  deque->cabeca=no;
     }
-  } return deque;
+  }
 }
 
 //Remover um nó numa estrutura Deque

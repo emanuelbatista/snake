@@ -1,3 +1,6 @@
+#include "no.h"
+
+//Estrutura Deque
 typedef struct deque
 {
 	No* cabeca;
@@ -5,8 +8,8 @@ typedef struct deque
 	int tamanho;
 }Deque;
 
-Deque criarDeque(void);
+Deque* criarDeque(void);
 
-void dequeInserir(Deque* deque, char dado);
+void dequeInserir(Deque* deque, No* no);
 
 void dequeRemover(Deque* deque);
