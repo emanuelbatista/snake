@@ -4,7 +4,7 @@
 //Criar Deque 
 Deque* criarDeque(void)
 {
-	Deque* deque=malloc(sizeof(Deque));
+	Deque* deque=(Deque*)malloc(sizeof(Deque));
 	deque->cabeca=NULL;
 	deque->calda=NULL;
 	deque->tamanho=0;
