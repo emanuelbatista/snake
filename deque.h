@@ -13,3 +13,5 @@ Deque* criarDeque(void);
 void dequeInserir(Deque* deque, No* no);
 
 void dequeRemover(Deque* deque);
+
+void dequeReverter(Deque* deque);

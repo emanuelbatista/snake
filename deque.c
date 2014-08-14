@@ -42,3 +42,16 @@ void dequeRemover(Deque* deque)
   }
   free(no);
 }
+
+//Reverter uma estrutura deque
+void dequeReverter(Deque* deque){
+  deque->calda=deque->cabeca;
+  No* no=deque->cabeca->pro;
+  for(;;){
+    deque->cabeca->pro=deque->cabeca->ante;
+    deque->cabeca->ante=no;
+    if(no==NULL)break;
+    deque->cabeca=no;
+    no=no->pro;
+  }
+}
